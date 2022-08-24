@@ -1,14 +1,33 @@
 import express from "express"
+import mysql from "mysql"
+
+
+
 const app = express()
+const connection = mysql.createConnection({
+    host:'localhost',
+    user:'root',
+    password:'',
+    database:'notes_app'
+})
+
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
+
+
 
 //config to access form information
 app.use(express.urlencoded({extended:false}))
 
 app.get('/', (req, res) => {
-    let title = 'Index page'
-    res.render('index', {title: title})
+    let sql= 'SELECT * FROM note'
+    connection.query(
+        sql, (error, results) => {
+            res.render('index', {notes: results})
+
+        }
+    )
+    
 })
 app.get('/about', (req, res) => {
     let title = 'About page'
@@ -29,7 +48,14 @@ app.post('/create', (req, res) =>{
         body:req.body.body
     }
 
-    console.log(note)
+    let sql = 'INSERT INTO note(title, body) VALUES (?,?)'
+
+    connection.query(
+        sql, [note.title, note.body], (error, results) =>{
+            res.redirect('/')
+
+        }
+    )
 
 })
 
