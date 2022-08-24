@@ -1,4 +1,10 @@
 <%- include('partials/header')%>
     <a href="/create">Create a note</a>
 
+    <% for (let note of notes) {%>
+
+        <h1><%= note.title %></h1>
+
+    <% }%>
+
 <%- include('partials/footer')%>    
