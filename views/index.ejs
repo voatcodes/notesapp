@@ -3,7 +3,7 @@
 
     <% for (let note of notes) {%>
 
-        <h1><%= note.title %></h1>
+        <h1><a href="/note/<%= note.id %>"><%= note.title %></a></h1>
 
     <% }%>
 
