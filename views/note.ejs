@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<main id="note" class="container">
+    <h1><%= note.title %></h1>
+    <div><%= note.body %></div>
+
+    <a href="/edit/<%= note.id %>">Edit note</a>
+    <a href="/delete/<%= note.id %>">Delete note</a>
+</main>
+
+
+
+<%- include('partials/footer') %>
