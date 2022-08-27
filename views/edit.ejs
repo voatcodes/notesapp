@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+<main>
+    <form action="/edit/<%= note.id %>" method="post">
+        <label for="" >Title</label>
+        <input type="text" name="title" value="<%= note.title%>">
+        <label for="">Body</label>
+        <textarea name="body" id="" cols="30" rows="10"><%= note.body %></textarea>
+        <input type="submit" value="save">
+    </form>
+</main>
+
+
+
+<%- include('partials/footer') %>
