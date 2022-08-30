@@ -1,10 +1,12 @@
 <%- include('partials/header')%>
-    <a href="/create">Create a note</a>
+    <main id="createpage">
+        <a class="aindex1" href="/create">Create a note</a>
 
     <% for (let note of notes) {%>
 
-        <h1><a href="/note/<%= note.id %>"><%= note.title %></a></h1>
+        <h1 class="h1index"><a class="aindex2" href="/note/<%= note.id %>"><%= note.title %></a></h1>
 
     <% }%>
+    </main>
 
 <%- include('partials/footer')%>    
