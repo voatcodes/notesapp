@@ -2,11 +2,29 @@
 
 <main>
     <form action="/create" method="post">
-        <label for="" >Title</label>
-        <input type="text" name="title">
-        <label for="">Body</label>
-        <textarea name="body" id="" cols="30" rows="10"></textarea>
-        <input type="submit" value="save">
+        <div class="title">
+            <div id="titleid">
+                <label for="" class="title">TITLE</label>
+            </div>
+            <div id="titleinputid">
+                <input type="text" name="title">
+            </div>
+        </div>
+
+        <div class="body">
+            <div id="bodyid">
+                <label for="">BODY</label>
+            </div>
+            
+            <div id="bodytextareaid">
+                <textarea name="body" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div id="bodyinputid">
+                <input type="submit" value="save">
+            </div>
+        </div>
+       
     </form>
 </main>
 
