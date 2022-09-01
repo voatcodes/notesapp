@@ -25,14 +25,16 @@ header{
     font-family: anticdidone;
 }
 
+header a{
+    text-decoration: none;
+}
+
 #h1header{
     color: #ae986d;
     justify-content: left;
     margin-top: 12px;
     margin-bottom: 12px;
     margin-left: 50px;
-    
-
 }
 
 #longline{
@@ -138,10 +140,10 @@ main{
 }
 
 .body input{
-    width: 200px;
+    width: 600px;
     font-size: 22px;
     letter-spacing: 1pt;
-    margin-left: 300px;
+    margin-left: 90px;
     margin-top: 25px;
     margin-bottom: 25px;
     color: #000000;
@@ -166,6 +168,10 @@ main{
     font-weight: bold;
 }
 
+.aindex1 #aindex1{
+    align-content: center;
+}
+
 .h1index{
     width: 500px;
     border: 3px solid #ae986d;
@@ -181,4 +187,48 @@ main{
 .h1index #aboutpageh1{
     align-items: center;
     margin-top: 100px;
+}
+
+#note h1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #ae986d;
+}
+
+#note small{
+    color: #ae986d;
+    font-style: italic;
+    border: 1px solid white;
+    width: 100%;
+}
+
+#note div{
+    color: #ae986d;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#note #edit {
+    width: 750px;
+    background-color: #000000;
+    border-bottom: 3px solid #ae986d;
+    color: #ae986d;
+}
+
+#note #edit:hover{
+    border-bottom: 3px solid red;
+    color: red;
+}
+
+#note #delete {
+    width: 750px;   
+}
+
+#note #delete:hover{
+    background-color: red;
+}
+
+#editanddelete{
+    display: flex;
+    flex-direction: row;
 }
