@@ -2,10 +2,13 @@
 
 <main id="note" class="container">
     <h1><%= note.title %></h1>
-    <div><%= note.body %></div>
+    <div><%= note.body %></div><br>
+    <small><%= note.date_created %></small>
 
-    <a class="aindex1" href="/edit/<%= note.id %>">Edit note</a>
-    <a class="aindex1" href="/delete/<%= note.id %>">Delete note</a>
+   <div id="editanddelete">
+    <a class="aindex1" href="/edit/<%= note.id %>" id="edit">Edit note</a>
+    <a class="aindex1" href="/delete/<%= note.id %>" id="delete">Delete note</a>
+   </div>
 </main>
 
 
