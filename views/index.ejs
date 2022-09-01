@@ -1,6 +1,6 @@
 <%- include('partials/header')%>
     <main id="createpage">
-        <a class="aindex1" href="/create">Create a note</a>
+        <a class="aindex1" id="aindex1" href="/create">Create a note</a>
 
     <% for (let note of notes) {%>
 
@@ -8,5 +8,14 @@
 
     <% }%>
     </main>
+
+    <script>
+        let titles = document.querySelectorAll('h1')
+        titles.forEach(title => {
+            title.addEventListener('click', () => {
+                location.href = title.firstElementChild.href
+            })
+        })
+    </script>
 
 <%- include('partials/footer')%>    
